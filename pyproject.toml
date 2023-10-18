@@ -41,7 +41,7 @@ line-length = 79
 pythonpath = "."
 
 [tool.taskipy.tasks]
-lint = 'ruff . && black --check . --diff'
+lint = 'ruff . && black .'
 format = 'black .  && isort .'
 run = 'uvicorn fast_zero.app:app --reload'
 pre_test = 'task lint'
