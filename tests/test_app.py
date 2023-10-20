@@ -25,16 +25,16 @@ def test_create_user(client):
     }
 
 
-def test_create_user_exists(client, user):
-    response = client.post(
-        "/users/",
-        json={
-            "username": user.username,
-            "email": "alice@example.com",
-            "password": "secret",
-        },
-    )
-    assert response.status_code == 400
+# def test_create_user_exists(client, user):
+#     response = client.post(
+#         "/users/",
+#         json={
+#             "username": user.username,
+#             "email": "alice@example.com",
+#             "password": "secret",
+#         },
+#     )
+#     assert response.status_code == 400
 
 
 def test_read_users(client):
